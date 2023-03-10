@@ -9,7 +9,7 @@ const SignUp = () => {
   const [Password, setPassword] = useState("");
 
   const handlesignUp= async () => {
-    let result = await axios.post(`http://localhost:3000/signup`, {
+    let result = await axios.post(`/signup`, {
       method: "post",
       body: JSON.stringify({ Name, Email, Password }),
       headers: {

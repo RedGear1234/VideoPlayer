@@ -25,7 +25,6 @@ app.post("/signin", async (req, res) => {
       res.send({ result: "No User Found!!" });
     }
   }
-
 });
 
 app.post("/signup", async (req, res) => {

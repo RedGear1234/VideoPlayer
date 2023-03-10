@@ -16,7 +16,7 @@ const SignIn = () => {
   }, []);
 
   const handleSignIn = async () => {
-    let result = await fetch(`http://localhost:3000/signin`, {
+    let result = await fetch(`/signin`, {
       method: "post",
       body: JSON.stringify({ Email, Password }),
       headers: {
