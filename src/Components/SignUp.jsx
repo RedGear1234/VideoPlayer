@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios"
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -8,7 +9,7 @@ const SignUp = () => {
   const [Password, setPassword] = useState("");
 
   const handlesignUp= async () => {
-    let result = await fetch(`http://localhost:3000/signup`, {
+    let result = await axios.get(`http://localhost:3000/signup`, {
       method: "post",
       body: JSON.stringify({ Name, Email, Password }),
       headers: {

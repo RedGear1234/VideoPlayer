@@ -32,7 +32,6 @@ app.post("/signup", async (req, res) => {
   let result = await person.save();
   result = result.toObject();
   delete result.Password;
-
   Jwt.sign({ result }, jwtKey, { expiresIn: "2h" }, (err, token) => {
     if (err) {
       res.send({ result: "No user Found !!" });
