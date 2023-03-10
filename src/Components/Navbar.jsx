@@ -21,7 +21,7 @@ const Navbar = () => {
           <>
             <div className="logout">
               <Search />
-              <Link to="/sigup" onClick={logout} className="logout-btn">
+              <Link to="/signup" onClick={logout} className="logout-btn">
                 Logout
               </Link>
             </div>

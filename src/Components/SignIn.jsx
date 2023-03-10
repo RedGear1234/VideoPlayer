@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+// import axios from "../api/axios";
 
 
 const SignIn = () => {
@@ -16,7 +16,7 @@ const SignIn = () => {
   }, []);
 
   const handleSignIn = async () => {
-    let result = await axios.post(`http://localhost:3000/signin`, {
+    let result = await fetch(`http://localhost:3000/signin`, {
       method: "post",
       body: JSON.stringify({ Email, Password }),
       headers: {
@@ -24,6 +24,8 @@ const SignIn = () => {
         "Content-Type": "application/json",
       },
     });
+    console.log(result)
+
 
     result = await result.json();
 

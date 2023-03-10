@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios"
+import axios from "../api/axios"
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -9,7 +9,7 @@ const SignUp = () => {
   const [Password, setPassword] = useState("");
 
   const handlesignUp= async () => {
-    let result = await axios.get(`http://localhost:3000/signup`, {
+    let result = await axios.post(`/signup`, {
       method: "post",
       body: JSON.stringify({ Name, Email, Password }),
       headers: {
@@ -17,7 +17,7 @@ const SignUp = () => {
       },
     });
 
-    result = await result.json();
+    // result = await result.json();
     localStorage.setItem("user", JSON.stringify(result.result));
     localStorage.setItem("token", JSON.stringify(result.auth));
 
