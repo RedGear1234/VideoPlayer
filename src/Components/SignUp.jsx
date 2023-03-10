@@ -9,15 +9,18 @@ const SignUp = () => {
   const [Password, setPassword] = useState("");
 
   const handlesignUp= async () => {
-    let result = await axios.post(`/signup`, {
-      method: "post",
-      body: JSON.stringify({ Name, Email, Password }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    let result = await axios.post(
+      `https://merry-kelpie-faf60c.netlify.app/signup`,
+      {
+        method: "post",
+        body: JSON.stringify({ Name, Email, Password }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
-    // result = await result.json();
+    result = await result.json();
     localStorage.setItem("user", JSON.stringify(result.result));
     localStorage.setItem("token", JSON.stringify(result.auth));
 
