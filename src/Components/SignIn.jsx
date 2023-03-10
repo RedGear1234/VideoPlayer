@@ -16,7 +16,7 @@ const SignIn = () => {
   }, []);
 
   const handleSignIn = async () => {
-    let result = await fetch(`https://merry-kelpie-faf60c.netlify.app/signin`, {
+    let result = await fetch(`http://localhost:3000/signin`, {
       method: "post",
       body: JSON.stringify({ Email, Password }),
       headers: {
