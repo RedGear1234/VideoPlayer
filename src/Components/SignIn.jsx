@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+
 
 const SignIn = () => {
   const navigate = useNavigate();
@@ -14,7 +16,7 @@ const SignIn = () => {
   }, []);
 
   const handleSignIn = async () => {
-    let result = await fetch(`http://localhost:3000/signin`, {
+    let result = await axios.post(`http://localhost:3000/signin`, {
       method: "post",
       body: JSON.stringify({ Email, Password }),
       headers: {
