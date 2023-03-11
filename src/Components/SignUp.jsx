@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "../api/axios"
+// import axios from "../api/axios"
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -18,7 +18,6 @@ const SignUp = () => {
     });
 
     // result = await result.json()
-        console.log(result);
 
     localStorage.setItem("user", JSON.stringify(result.result));
     localStorage.setItem("token", JSON.stringify(result.auth));
