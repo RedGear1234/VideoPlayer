@@ -14,7 +14,6 @@ function App() {
         {/* private components start */}
         <Route path="/" element={<Feed />} />
         <Route path="/video/:id" element={<VideoDetail />} />
-        <Route path="/search/:searchTerm" element={<SearchFeed />} />
         {/* private components end */}
         <Route path="/signin" element={<SignIn />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>

@@ -26,6 +26,7 @@ const VideoDetail = () => {
     snippet: { title, channelId, channelTitle },
     statistics: { viewCount, likeCount },
   } = Detail;
+  
 
 
   return (
@@ -38,8 +39,19 @@ const VideoDetail = () => {
             <h4>{channelTitle}</h4>
           </Link>
           <div className="like-div">
-            <p>{parseInt(viewCount).toLocaleString()}</p>
-            <p>{parseInt(likeCount).toLocaleString()}</p>
+            <p>
+              ViewCounts <br />
+              {parseInt(viewCount).toLocaleString()}
+            </p>
+            <p>
+              Likes <br />
+              {parseInt(likeCount).toLocaleString()}
+            </p>
+            <button
+              className="like-btn"
+            >
+              ❤
+            </button>
           </div>
         </div>
         <Comments videos={videos} />

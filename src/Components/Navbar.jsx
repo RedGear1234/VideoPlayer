@@ -20,7 +20,6 @@ const Navbar = () => {
         {auth ? (
           <>
             <div className="logout">
-              <Search />
               <Link to="/signup" onClick={logout} className="logout-btn">
                 Logout
               </Link>
