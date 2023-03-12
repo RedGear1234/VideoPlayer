@@ -24,8 +24,6 @@ const Comments = () => {
   }, []);
 
  
-
-
   return (
     <div className="commnets">
       <h2>Comments :</h2>
