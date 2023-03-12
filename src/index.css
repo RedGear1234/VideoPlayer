@@ -7,8 +7,7 @@
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background-color: black;
-  color: white;
+  background-color: rgb(25, 25, 25);
 }
 
 /* Navbar  */
@@ -26,10 +25,10 @@ body {
 /* SearchBar  */
 
 .searchInput {
-  border: 1px solid white;
-  width: 300px;
+  border-bottom: 1px solid black;
+  border-radius: 0px;
+  width: 30vh;
   padding: 0.5rem;
-  background-color: black;
   color: white;
   outline: none;
   margin: 0.5rem;
@@ -39,10 +38,10 @@ body {
   border: none;
   padding: 0.5rem 0.5rem;
   margin-top: 1rem;
-  background: linear-gradient(to right, #5cfffc, #096963);
   color: white;
   transition: transform 600ms ease-in-out;
-  border-radius: 5px;
+  /* border: 1px solid black; */
+  background-color: #a3c1bf;
 }
 
 
@@ -51,18 +50,25 @@ body {
 /* Feed  */
 
 main {
-  border: 1px solid green;
-  height: 100vh;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.1rem;
 }
 .feed {
   border: 1px solid wheat;
   width: 250px;
   height: 380px;
+  object-fit: cover;
 }
 
 .register-bx {
   padding: 0.5rem;
 }
+
+
 
 .SignIN {
   border: none;
@@ -134,13 +140,14 @@ input {
   border-radius: 5px;
 }
 
-input::placeholder {
+/* input::placeholder {
   color: white;
-}
+} */
 
 input:hover {
   transform: translateX(5px);
-  box-shadow: 1px 0px 10px rgba(105, 102, 102, 0.898);
+  transform: scale(1.1);
+  /* box-shadow: 1px 0px 10px rgba(105, 102, 102, 0.898); */
 }
 
 .sign_up_btn {
@@ -213,13 +220,70 @@ input:hover {
 
 .logout-btn{
   border: none;
-  padding: 0.3rem 0.5rem;
-  background: linear-gradient(to right, #c21818, #595d28);
-  color: white;
-  transition: transform 600ms ease-in-out;
-  border-radius: 5px;
   text-decoration: none;
   margin-left: 5rem;
-  font-size: small;
-  margin-top: .5rem;
+  font-size: smaller;
+  margin-top: .2rem;
+  border: none;
+  padding: 0.4rem 0.4rem;
+  background-color: #d77b18;
+  color: white;
+}
+
+
+/* videoDetails  */
+
+.sugessted-videos{
+  display: flex;
+  flex-direction: column;
+}
+
+/* Feed  */
+
+.feed-bar{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1rem;
+}
+
+.feed-bar button{
+  border: none;
+  background-color: red;
+  color: white;
+  padding:.5rem 1rem;
+}
+
+/* React Player  */
+
+.ReactPlayer{
+  display: flex;
+}
+
+.react-player{
+  color: white;
+  margin-left: 1rem;
+}
+
+.react-player h3{
+  margin: .5rem 0rem;
+}
+
+.like-div{
+  display: flex;
+  width: 150px;
+  justify-content:space-between;
+  margin: 1rem 0rem;
+}
+
+.channelTitle{
+  text-decoration: none;
+  color: white;
+}
+
+/*  comments */
+
+.commnets{
+  border: 1px solid red;
+  height: 80%;
 }

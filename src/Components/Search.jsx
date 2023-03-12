@@ -1,21 +1,9 @@
-import React from "react";
+import React from 'react'
 
 const Search = () => {
- 
-  
-
-
   return (
-    <div >
-      <input
-        type="text"
-        className="searchInput"
-        placeholder="search"
-        onChange={null}
-      />
-      <button className="Search-submit">Search</button>
-    </div>
-  );
-};
+    <div>Search</div>
+  )
+}
 
-export default Search;
+export default Search
