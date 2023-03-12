@@ -284,6 +284,6 @@ input:hover {
 /*  comments */
 
 .commnets{
-  border: 1px solid red;
-  height: 80%;
+  height: fit-content;
+  margin-top: 4rem;
 }

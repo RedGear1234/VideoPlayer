@@ -28,10 +28,11 @@ const Comments = () => {
 
   return (
     <div className="commnets">
+      <h2>Comments :</h2>
       {comments.map((item) =>{
         return (
           <>
-          <h2>{item.snippet?.topLevelComment.snippet.authorDisplayName}</h2>
+          <h3>{item.snippet?.topLevelComment.snippet.authorDisplayName}</h3>
           <p>{item.snippet?.topLevelComment.snippet.textDisplay}</p>
           </>
         );

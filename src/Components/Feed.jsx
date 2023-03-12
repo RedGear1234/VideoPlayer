@@ -33,7 +33,7 @@ const Feed = () => {
 
   return (
     <section>
-      <div className="feed-">
+      <div className="feed-bar">
         {categories.map((category) => (
           <button
             className="category-btn"

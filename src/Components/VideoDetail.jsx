@@ -42,7 +42,6 @@ const VideoDetail = () => {
             <p>{parseInt(likeCount).toLocaleString()}</p>
           </div>
         </div>
-
         <Comments videos={videos} />
       </div>
       <div className="sugessted-videos">
